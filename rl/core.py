@@ -111,6 +111,7 @@ class Agent(object):
         episode_reward = None
         episode_step = None
         did_abort = False
+        reward_list = []
         try:
             while self.step < nb_steps:
                 if observation is None:  # start of a new episode
@@ -196,6 +197,7 @@ class Agent(object):
                 callbacks.on_step_end(episode_step, step_logs)
                 episode_step += 1
                 self.step += 1
+                reward_list.append(reward)
 
                 if done:
                     # We are in a terminal state but the agent hasn't yet seen it. We therefore
@@ -226,7 +228,7 @@ class Agent(object):
         callbacks.on_train_end(logs={'did_abort': did_abort})
         self._on_train_end()
 
-        return history
+        return history, reward_list
 
     def test(self, env, nb_episodes=1, action_repetition=1, callbacks=None, visualize=True,
              nb_max_episode_steps=None, nb_max_start_steps=0, start_step_policy=None, verbose=1):
