@@ -1,3 +1,14 @@
+This forked respository contains the implementation of CartPole experiment of
+# Faster Reinforcemt Learning Using Active Simulators
+
+[Vikas Jain](https://www.linkedin.com/in/vksjn/), [Theja Tulabandhula](http://theja.org/) ; *Conference on Neural Information Processing Systems (NIPS) 2017 Workshop: Teaching Machines, Robots, and Humans*
+### Paper Link
+[https://arxiv.org/pdf/1703.07853.pdf](https://arxiv.org/pdf/1703.07853.pdf)
+
+This implementation is adapted from keras-rl library. The `experiments/` folder added contains all the new added files, with a README file describing the files.
+
+We used OpenAI gym for the CartPole environment. We define five new CartPole environment to facilitate our experiments. The enviroments added are provided here in the GitHub gist [https://gist.github.com/vikasjiitk/18728919f23654628dff9be6bb4bf9c2](https://gist.github.com/vikasjiitk/18728919f23654628dff9be6bb4bf9c2). Please modify your gym according to the Gist to run the experiments.
+
 # Deep Reinforcement Learning for Keras
 [![Build Status](https://api.travis-ci.org/matthiasplappert/keras-rl.svg?branch=master)](https://travis-ci.org/matthiasplappert/keras-rl)
 [![Documentation](https://readthedocs.org/projects/keras-rl/badge/)](http://keras-rl.readthedocs.io/)
